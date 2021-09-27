@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, StyleSheet } from "react-native";
-import { Headline, Paragraph } from "react-native-paper";
+import { Headline, Paragraph, Button, Text } from "react-native-paper";
 import {
   CodeField,
   Cursor,
@@ -8,7 +8,7 @@ import {
   useClearByFocusCell,
 } from "react-native-confirmation-code-field";
 
-function Verification(props) {
+function Verification() {
   const [value, setValue] = useState("");
   const ref = useBlurOnFulfill({ value, cellCount: CELL_COUNT });
   const [props, getCellOnLayoutHandler] = useClearByFocusCell({
@@ -22,7 +22,7 @@ function Verification(props) {
         <Headline>Get a code?</Headline>
         <Paragraph>fill your OTP code below</Paragraph>
       </>
-
+      <View style={{ height: "5%" }} />
       <>
         <CodeField
           ref={ref}
@@ -46,20 +46,25 @@ function Verification(props) {
           )}
         />
       </>
-
-      <View style={{ flexDirection: "row" }}>
-        <Paragraph>
-          Didn’t receive code? <Button mode="text">Resend.</Button>.
-        </Paragraph>
+      <View style={{ height: "5%" }} />
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Paragraph>Didn’t receive code?</Paragraph>
+        <Button uppercase={false}>Resend.</Button>
       </View>
-
-      <Button>Let's go</Button>
+      <View style={{ height: "5%" }} />
+      <Button mode="contained">Let's go</Button>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  container: { paddingHorizontal: "5%", flex: 1, justifyContent: "center" },
   codeFieldRoot: {
     marginTop: 20,
     width: 280,
@@ -80,7 +85,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   focusCell: {
-    borderBottomColor: "#007AFF",
+    borderBottomColor: "#F4648B",
     borderBottomWidth: 2,
   },
 });
