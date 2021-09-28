@@ -5,11 +5,13 @@ import { StyleSheet, Text, View } from "react-native";
 import Login from "./src/screens/authentication/Login";
 import Register from "./src/screens/authentication/Register";
 import Verification from "./src/screens/authentication/Verification";
+import Home from "./src/screens/main/Home";
+import HomeList from "./src/components/list/HomeList";
 
 export default function App() {
   return (
     <PaperProvider>
-      <Verification />
+      <HomeList />
     </PaperProvider>
   );
 }
