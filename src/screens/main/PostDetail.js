@@ -1,11 +1,27 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import { Card, Avatar, Text, Paragraph, Button } from "react-native-paper";
+import { Card, IconButton, Title, Avatar } from "react-native-paper";
 
-function HomeList(props) {
+function PostDetail(props) {
   return (
     <View style={styles.container}>
-      <Card style={{ paddingHorizontal: "2.5%" }}>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "center",
+          paddingHorizontal: "5%",
+        }}
+      >
+        <IconButton
+          icon="arrow-left"
+          color="#F4648B"
+          size={20}
+          onPress={() => console.log("Pressed")}
+        />
+        <Title>Mark's Post</Title>
+      </View>
+
+      <View>
         <Card.Title
           title="Stephen J"
           subtitle="Paris, France"
@@ -24,7 +40,7 @@ function HomeList(props) {
           resizeMode="stretch"
           style={{ backgroundColor: "#ffffff" }}
         />
-        <Paragraph numberOfLines={2}>
+        <Paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium
           eu nisi id pulvinar. Praesent urna neque, dictum ut viverra id,
           posuere id urna. Mauris sed semper lectus.
@@ -33,13 +49,13 @@ function HomeList(props) {
           <Button icon="recycle-variant">435</Button>
           <Button icon="message-outline">23</Button>
         </Card.Actions>
-      </Card>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { padding: "5%" },
+  container: {},
 });
 
-export default HomeList;
+export default PostDetail;
