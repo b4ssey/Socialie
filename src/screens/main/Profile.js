@@ -14,11 +14,11 @@ function Profile(props) {
           <View
             style={{ flexDirection: "row", justifyContent: "space-around" }}
           >
-            <Card.Content>
+            <Card.Content style={{ alignItems: "center" }}>
               <Title>862</Title>
               <Paragraph>Followers</Paragraph>
             </Card.Content>
-            <Card.Content>
+            <Card.Content style={{ alignItems: "center" }}>
               <Title>238</Title>
               <Paragraph>Following</Paragraph>
             </Card.Content>

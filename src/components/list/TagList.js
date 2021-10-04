@@ -1,14 +1,30 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
-import { Button, Card } from "react-native-paper";
+import { View, StyleSheet, ImageBackground } from "react-native";
+import { Button, Card, Text, Title } from "react-native-paper";
 
 function TagList(props) {
   return (
-    <Card.Cover source={require("../../../assets/tag-discover.png")}>
-      <Card.Actions>
-        <Button>Nature</Button>
-      </Card.Actions>
-    </Card.Cover>
+    <View style={styles.container}>
+      <ImageBackground
+        source={require("../../../assets/tag-discover.png")}
+        style={{
+          height: 120,
+          width: 120,
+          borderRadius: 10,
+          overflow: "hidden",
+        }}
+      >
+        <View
+          style={{
+            backgroundColor: "rgba(0,0,0,.6)", //try 20%
+            flex: 1,
+            justifyContent: "flex-end",
+          }}
+        >
+          <Title style={{ padding: "10%", color: "#FFFFFF" }}>Hello</Title>
+        </View>
+      </ImageBackground>
+    </View>
   );
 }
 

@@ -7,11 +7,15 @@ import Register from "./src/screens/authentication/Register";
 import Verification from "./src/screens/authentication/Verification";
 import Home from "./src/screens/main/Home";
 import HomeList from "./src/components/list/HomeList";
+import PostDetail from "./src/screens/main/PostDetail";
+import CommentList from "./src/components/list/CommentList";
+import Profile from "./src/screens/main/Profile";
+import TagList from "./src/components/list/TagList";
 
 export default function App() {
   return (
     <PaperProvider>
-      <HomeList />
+      <TagList />
     </PaperProvider>
   );
 }

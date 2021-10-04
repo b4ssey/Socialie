@@ -1,6 +1,16 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import { Card, IconButton, Title, Avatar } from "react-native-paper";
+import {
+  Card,
+  IconButton,
+  Title,
+  Avatar,
+  Paragraph,
+  Text,
+  Button,
+  Headline,
+  Divider,
+} from "react-native-paper";
 
 function PostDetail(props) {
   return (
@@ -8,8 +18,9 @@ function PostDetail(props) {
       <View
         style={{
           flexDirection: "row",
-          justifyContent: "center",
-          paddingHorizontal: "5%",
+          //   justifyContent: "center",
+          //   paddingHorizontal: "5%",
+          alignItems: "center",
         }}
       >
         <IconButton
@@ -18,8 +29,10 @@ function PostDetail(props) {
           size={20}
           onPress={() => console.log("Pressed")}
         />
-        <Title>Mark's Post</Title>
+        <Headline>Mark's Post</Headline>
       </View>
+
+      <Divider />
 
       <View>
         <Card.Title
@@ -55,7 +68,7 @@ function PostDetail(props) {
 }
 
 const styles = StyleSheet.create({
-  container: {},
+  container: { padding: "5%" },
 });
 
 export default PostDetail;
