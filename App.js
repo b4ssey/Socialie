@@ -11,11 +11,12 @@ import PostDetail from "./src/screens/main/PostDetail";
 import CommentList from "./src/components/list/CommentList";
 import Profile from "./src/screens/main/Profile";
 import TagList from "./src/components/list/TagList";
+import Overview from "./src/components/navigation/Overview";
 
 export default function App() {
   return (
     <PaperProvider>
-      <TagList />
+      <Overview />
     </PaperProvider>
   );
 }
