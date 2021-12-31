@@ -44,7 +44,7 @@ function Profile(props) {
 }
 
 const styles = StyleSheet.create({
-  container: { paddingHorizontal: "5%" },
+  container: { padding: "5%" },
 });
 
 export default Profile;
