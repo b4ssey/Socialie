@@ -8,6 +8,7 @@ import Home from "../../screens/main/Home";
 import Discover from "../../screens/main/Discover";
 import Notification from "../../screens/main/Notification";
 import Profile from "../../screens/main/Profile";
+import Post from "../../screens/main/Post";
 
 const Stack = createNativeStackNavigator();
 
@@ -31,7 +32,15 @@ const DiscoverRoute = () => {
   );
 };
 
-const PostRoute = () => <Text>Post things here</Text>;
+const PostRoute = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Post">
+        <Stack.Screen name="Post" component={Post} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
 
 const NotificationRoute = () => {
   return (
