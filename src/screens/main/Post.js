@@ -6,7 +6,7 @@ import {
   Image,
   ImageBackground,
 } from "react-native";
-import { Button, TextInput } from "react-native-paper";
+import { Badge, Button, IconButton, TextInput } from "react-native-paper";
 import * as ImagePicker from "expo-image-picker";
 
 function Post(props) {
@@ -18,7 +18,7 @@ function Post(props) {
       aspect: [4, 3],
       quality: 1,
     });
-    console.log(result);
+    // console.log(result);
     if (!result.cancelled) {
       setImage(result.uri);
     }
@@ -28,15 +28,26 @@ function Post(props) {
     <>
       <View style={{ justifyContent: "center", paddingHorizontal: "5%" }}>
         <KeyboardAvoidingView>
-          <TextInput label="location" placeholder="Where are you?" />
-          <TextInput label="caption" placeholder="What's on your mind?" />
+          <View style={{ height: "5%" }} />
+          <TextInput
+            label="caption"
+            placeholder="What's on your mind?"
+            // multiline={true}
+            // height={150}
+            // style={{ lineHeight: 50 }}
+          />
+          {/* <View style={{ height: "5%" }} />
+          <TextInput label="location" placeholder="Where are you?" /> */}
+          <View style={{ height: "5%" }} />
           {!image ? (
             <ImageBackground
               style={{
                 width: 200,
                 height: 200,
                 justifyContent: "center",
-                alignItems: "center",
+                alignSelf: "center",
+                borderColor: "#FAD9E6",
+                borderWidth: 5,
               }}
             >
               <Button icon={"image-plus"} onPress={pickImage}>
@@ -44,12 +55,45 @@ function Post(props) {
               </Button>
             </ImageBackground>
           ) : (
-            //   <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />
-            <Image
-              source={{ uri: image }}
-              style={{ width: 200, height: 200 }}
-            />
+            <>
+              <View
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "center",
+                }}
+              >
+                <Image
+                  source={{ uri: image }}
+                  style={{
+                    width: 200,
+                    height: 200,
+                    borderRadius: 20,
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                />
+
+                <IconButton
+                  icon="delete"
+                  // color="#F4648B"
+                  size={30}
+                  onPress={() => setImage(null)}
+                />
+              </View>
+
+              {/* <View style={{ height: "25%" }} />
+              <Button
+                uppercase={false}
+                labelStyle={{ textDecorationLine: "underline" }}
+                onPress={() => setImage(null)}
+              >
+                delete?
+              </Button> */}
+            </>
           )}
+          <View style={{ height: "5%" }} />
+
+          <Button mode="contained">Submit</Button>
         </KeyboardAvoidingView>
       </View>
     </>

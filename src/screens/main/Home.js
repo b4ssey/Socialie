@@ -60,7 +60,7 @@ function Home(props) {
           return (
             <>
               <View style={styles.container}>
-                <View
+                {/* <View
                   style={{
                     flexDirection: "row",
                     justifyContent: "center",
@@ -81,7 +81,7 @@ function Home(props) {
                     size={20}
                     onPress={() => console.log("Pressed")}
                   />
-                </View>
+                </View> */}
                 <Headline>Feeds</Headline>
               </View>
             </>
