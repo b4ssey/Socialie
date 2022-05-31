@@ -9,6 +9,7 @@ import Discover from "../../screens/main/Discover";
 import Notification from "../../screens/main/Notification";
 import Profile from "../../screens/main/Profile";
 import Post from "../../screens/main/Post";
+import PostDetail from "../../screens/main/PostDetail";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,7 +17,9 @@ const HomeRoute = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Feeds" component={Home} />
+        {/* change to habe soeones post */}
+        <Stack.Screen name="postHome" component={PostDetail} />
       </Stack.Navigator>
     </NavigationContainer>
   );

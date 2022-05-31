@@ -1,4 +1,19 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import endpoint from "../../utils/endpoint";
+
+export const loginUser = createAsyncThunk(
+  "users/loginUser",
+  async (state, { rejectWithValue }) => {
+    try {
+      return await client(`${endpoint.login}`, {
+        body: state,
+      });
+    } catch (err) {
+      return rejectWithValue(err);
+    }
+  }
+);
+
 const slice = createSlice({
   name: "users",
   initialState: {
@@ -12,8 +27,10 @@ const slice = createSlice({
     errorMessage: "",
     successMessage: "",
   },
+  reducers: {},
+  extraReducers: {},
 });
 
-const { userLoggedout } = slice.actions;
+const {} = slice.actions;
 
 export default slice.reducer;

@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import { Headline, Paragraph, TextInput, Button } from "react-native-paper";
 
-function Register(props) {
+function Register({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={{ flex: 0.9, justifyContent: "center" }}>
@@ -54,7 +54,9 @@ function Register(props) {
         }}
       >
         <Paragraph>Already have an account ?</Paragraph>
-        <Button uppercase={false}>Log in.</Button>
+        <Button uppercase={false} onPress={() => navigation.navigate("login")}>
+          Log in.
+        </Button>
       </View>
     </View>
   );

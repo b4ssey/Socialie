@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { View, StyleSheet, FlatList } from "react-native";
 import { Searchbar, IconButton, Colors, Headline } from "react-native-paper";
-import PostDetail from "./PostDetail";
+import PostList from "../../components/list/PostList";
 
-function Home(props) {
+function Home({ navigation }) {
   const [searchQuery, setSearchQuery] = useState("");
 
   const onChangeSearch = (query) => setSearchQuery(query);
@@ -56,45 +56,15 @@ function Home(props) {
       <FlatList
         data={emptydata}
         keyExtractor={(item) => item.id.toString()}
-        ListHeaderComponent={() => {
-          return (
-            <>
-              <View style={styles.container}>
-                {/* <View
-                  style={{
-                    flexDirection: "row",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    paddingHorizontal: "5%",
-                    marginVertical: "5%",
-                  }}
-                >
-                  <Searchbar
-                    placeholder="Search"
-                    iconColor="#F4648B"
-                    onChangeText={onChangeSearch}
-                    value={searchQuery}
-                  />
-                  <IconButton
-                    icon="inbox-outline"
-                    color="#F4648B"
-                    size={20}
-                    onPress={() => console.log("Pressed")}
-                  />
-                </View> */}
-                <Headline>Feeds</Headline>
-              </View>
-            </>
-          );
-        }}
         renderItem={({ item }) => {
           return (
-            <PostDetail
+            <PostList
               fName={item.fname}
               name={item.name}
               location={item.location}
               repost={item.repost}
               comment={item.comment}
+              onPress={() => navigation.navigate("postHome")}
             />
           );
         }}

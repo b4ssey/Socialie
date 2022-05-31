@@ -9,22 +9,19 @@ import Register from "./src/screens/authentication/Register";
 import Verification from "./src/screens/authentication/Verification";
 import Home from "./src/screens/main/Home";
 import HomeList from "./src/components/list/HomeList";
-import PostDetail from "./src/screens/main/PostDetail";
 import CommentList from "./src/components/list/CommentList";
 import Profile from "./src/screens/main/Profile";
 import TagList from "./src/components/list/TagList";
 import Overview from "./src/components/navigation/Overview";
 import Root from "./src/components/navigation/Root";
-import { NavigationContainer } from "@react-navigation/native";
+import Authentication from "./src/components/navigation/Authentication";
 
 export default function App() {
   return (
     <Provider store={store}>
-      <NavigationContainer>
-        <PaperProvider>
-          <Root />
-        </PaperProvider>
-      </NavigationContainer>
+      <PaperProvider>
+        <Overview />
+      </PaperProvider>
     </Provider>
   );
 }

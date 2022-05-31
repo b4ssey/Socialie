@@ -2,7 +2,7 @@ import React from "react";
 import { View, StyleSheet } from "react-native";
 import { Button, Headline, Paragraph, TextInput } from "react-native-paper";
 
-function Login(props) {
+function Login({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={{ flex: 0.9, justifyContent: "center" }}>
@@ -40,7 +40,12 @@ function Login(props) {
         }}
       >
         <Paragraph>Don’t have an account ? </Paragraph>
-        <Button uppercase={false}>Sign up.</Button>
+        <Button
+          uppercase={false}
+          onPress={() => navigation.navigate("register")}
+        >
+          Sign up.
+        </Button>
       </View>
     </View>
   );
