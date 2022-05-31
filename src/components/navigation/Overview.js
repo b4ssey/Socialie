@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, StyleSheet } from "react-native";
-import { Text, BottomNavigation } from "react-native-paper";
+import { BottomNavigation, Button } from "react-native-paper";
 import { NavigationContainer } from "@react-navigation/native";
 
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -17,9 +17,18 @@ const HomeRoute = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Feeds" component={Home} />
-        {/* change to habe soeones post */}
-        <Stack.Screen name="postHome" component={PostDetail} />
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ title: "Feeds" }}
+        />
+        <Stack.Screen
+          name="postHome"
+          component={PostDetail}
+          options={({ route }) => ({
+            title: `${route.params.name}'s Post`,
+          })}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -59,7 +68,15 @@ const AccountRoute = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Profile">
-        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen
+          name="Profile"
+          component={Profile}
+          options={{
+            headerRight: (props) => (
+              <Button icon="menu" {...props} style={{ marginLeft: "-15%" }} />
+            ),
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

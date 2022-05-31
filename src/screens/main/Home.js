@@ -14,7 +14,7 @@ function Home({ navigation }) {
       name: "Ubong",
       fname: "Ubong Bassey",
       location: "Dublin, Ireland.",
-      repost: "50",
+      like: "50",
       comment: "100",
     },
     {
@@ -22,7 +22,7 @@ function Home({ navigation }) {
       name: "Ekemini",
       fname: "Ekemini Bassey",
       location: "London, UK.",
-      repost: "25",
+      like: "25",
       comment: "30",
     },
     {
@@ -30,7 +30,7 @@ function Home({ navigation }) {
       name: "Deborah",
       fname: "Deborah Oladipo",
       location: "Ontario, Canada.",
-      repost: "500",
+      like: "500",
       comment: "1000",
     },
     {
@@ -38,7 +38,7 @@ function Home({ navigation }) {
       name: "Uwakmfon",
       fname: "Uwakmfon Bassey",
       location: "Abuja, Nigeria.",
-      repost: "50",
+      like: "50",
       comment: "100",
     },
     {
@@ -46,7 +46,7 @@ function Home({ navigation }) {
       name: "Charles",
       fname: "Charles Umoren",
       location: "Lagos, Nigeria.",
-      repost: "150",
+      like: "150",
       comment: "1200",
     },
   ];
@@ -62,9 +62,9 @@ function Home({ navigation }) {
               fName={item.fname}
               name={item.name}
               location={item.location}
-              repost={item.repost}
+              like={item.like}
               comment={item.comment}
-              onPress={() => navigation.navigate("postHome")}
+              onPress={() => navigation.navigate("postHome", item)}
             />
           );
         }}

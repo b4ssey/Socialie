@@ -5,7 +5,6 @@ import { Headline, Searchbar, IconButton } from "react-native-paper";
 function Discover(props) {
   return (
     <View style={styles.container}>
-      <Headline>Discover</Headline>
       <View
         style={{
           flexDirection: "row",

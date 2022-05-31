@@ -9,42 +9,36 @@ import {
   Divider,
 } from "react-native-paper";
 
-function CommentList(props) {
+function CommentList({ name, time, comment, likes }) {
   return (
     <>
-      <View>
-        <Divider />
-        <View style={styles.container}>
-          <Card.Title
-            title="Stephen J"
-            subtitle="1 hr"
-            titleStyle={{ color: "#F4648B" }}
-            // style={{}}
-            left={(props) => (
-              <Avatar.Image
-                {...props}
-                source={require("../../../assets/profile-image.png")}
-              />
-            )}
-          />
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium
-            eu nisi id pulvinar. Praesent urna neque, dictum ut viverra id,
-            posuere id urna. Mauris sed semper lectus.
-          </Paragraph>
-          <Card.Actions>
-            <Button uppercase={false}>Like</Button>
-            <Button uppercase={false}>Reply</Button>
-          </Card.Actions>
-        </View>
-        <Divider />
+      <View style={styles.container}>
+        <Card.Title
+          title={name}
+          subtitle={time}
+          titleStyle={{ fontSize: 15 }}
+          left={(props) => (
+            <Avatar.Image
+              {...props}
+              source={require("../../../assets/profile-image.png")}
+            />
+          )}
+        />
+        <Paragraph style={{ textAlign: "justify", paddingHorizontal: "5%" }}>
+          {comment}
+        </Paragraph>
+        <Card.Actions>
+          <Button icon="heart">{likes}</Button>
+          {/* <Button uppercase={false}>Reply</Button> */}
+        </Card.Actions>
       </View>
+      <Divider />
     </>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { paddingHorizontal: "5%" },
+  container: {},
 });
 
 export default CommentList;

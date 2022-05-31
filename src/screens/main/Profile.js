@@ -1,12 +1,19 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import { Avatar, Caption, Card, Paragraph, Title } from "react-native-paper";
+import TwoRowCard from "../../components/reusables/TwoRowCard";
 
 function Profile(props) {
   return (
     <View style={styles.container}>
       <>
-        <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
           <Avatar.Image
             size={60}
             source={require("../../../assets/profile-image.png")}
@@ -14,18 +21,9 @@ function Profile(props) {
           <View
             style={{ flexDirection: "row", justifyContent: "space-around" }}
           >
-            <Card.Content style={{ alignItems: "center" }}>
-              <Title>862</Title>
-              <Paragraph>Followers</Paragraph>
-            </Card.Content>
-            <Card.Content style={{ alignItems: "center" }}>
-              <Title>238</Title>
-              <Paragraph>Following</Paragraph>
-            </Card.Content>
-            <Card.Content>
-              <Title>942</Title>
-              <Paragraph>Likes</Paragraph>
-            </Card.Content>
+            <TwoRowCard top="862" bottom="Followers" />
+            <TwoRowCard top="238" bottom="Following" />
+            <TwoRowCard top="942" bottom="Likes" />
           </View>
         </View>
       </>
