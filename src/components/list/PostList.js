@@ -40,7 +40,7 @@ function PostList({ fName, location, like, comment, onPress }) {
           posuere id urna. Mauris sed semper lectus.
         </Paragraph>
         <Card.Actions>
-          <Button icon="heart">{like}</Button>
+          <Button icon="heart-outline">{like}</Button>
           <Button icon="message-outline">{comment}</Button>
         </Card.Actions>
       </TouchableOpacity>

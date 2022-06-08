@@ -15,11 +15,12 @@ import TagList from "./src/components/list/TagList";
 import Overview from "./src/components/navigation/Overview";
 import Root from "./src/components/navigation/Root";
 import Authentication from "./src/components/navigation/Authentication";
+import theme from "./src/components/theme";
 
 export default function App() {
   return (
     <Provider store={store}>
-      <PaperProvider>
+      <PaperProvider theme={theme}>
         <Overview />
       </PaperProvider>
     </Provider>

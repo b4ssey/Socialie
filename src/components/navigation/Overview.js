@@ -10,6 +10,7 @@ import Notification from "../../screens/main/Notification";
 import Profile from "../../screens/main/Profile";
 import Post from "../../screens/main/Post";
 import PostDetail from "../../screens/main/PostDetail";
+import Settings from "../../screens/main/Settings";
 
 const Stack = createNativeStackNavigator();
 
@@ -71,12 +72,18 @@ const AccountRoute = () => {
         <Stack.Screen
           name="Profile"
           component={Profile}
-          options={{
+          options={({ navigation }) => ({
             headerRight: (props) => (
-              <Button icon="menu" {...props} style={{ marginLeft: "-15%" }} />
+              <Button
+                icon="menu"
+                {...props}
+                style={{ marginLeft: "-15%" }}
+                onPress={() => navigation.navigate("Settings")}
+              />
             ),
-          }}
+          })}
         />
+        <Stack.Screen name="Settings" component={Settings} />
       </Stack.Navigator>
     </NavigationContainer>
   );
