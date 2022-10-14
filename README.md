@@ -8,11 +8,12 @@ This project is currently in development. It still has not reached its MVP.
 
 ## Project Screen Shot(s)
 
-Authentication
+### Authentication
 
 ![Authentication_Flow](assets/authentication.png?raw=true "Authentication Flow")
 
-Overview
+### Overview
+
 ![Overview_Flow](assets/overview.png?raw=true "Overview Flow")
 
 ## Installation and Setup Instructions
