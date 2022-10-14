@@ -10,8 +10,7 @@ This project is currently in development. It still has not reached its MVP.
 
 Authentication
 
-[ PRETEND SCREEN SHOT IS HERE ]
-![Fig1](assets/fig1.png?raw=true "Fig1" = 100x20)
+![Fig1](assets/fig1.png?raw=true "Fig1" =100x20)
 
 Overview
 
