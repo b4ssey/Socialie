@@ -21,7 +21,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <PaperProvider theme={theme}>
-        <Overview />
+        <Authentication />
       </PaperProvider>
     </Provider>
   );
