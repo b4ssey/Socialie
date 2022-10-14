@@ -10,7 +10,7 @@ This project is currently in development. It still has not reached its MVP.
 
 Authentication
 
-![Authentication_Flow](assets/authentiction.png?raw=true "Authentication Flow")
+![Authentication_Flow](assets/authentication.png?raw=true "Authentication Flow")
 
 Overview
 ![Overview_Flow](assets/overview.png?raw=true "Overview Flow")
