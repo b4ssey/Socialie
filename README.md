@@ -10,29 +10,26 @@ This project is currently in development. It still has not reached its MVP.
 
 Authentication
 
-![Fig1](assets/fig1.png?raw=true "Fig1" =100x20)
+![Authentication_Flow](assets/authentiction.png?raw=true "Authentication Flow")
 
 Overview
-
+![Overview_Flow](assets/overview.png?raw=true "Overview Flow")
 
 ## Installation and Setup Instructions
 
-
-Clone down this repository. You will need `expo` and `yarn` installed globally on your machine. Make sure you have expo go installed on your phone. 
+Clone down this repository. You will need `expo` and `yarn` installed globally on your machine. Make sure you have expo go installed on your phone.
 
 Installation:
 
-`expo install or yarn add`  
-
+`expo install or yarn add`
 
 To Start Server:
 
-`expo start`  
+`expo start`
 
 To Visit App, Make sure your device and system are on the same network.
- 
 
-## Reflection 
+## Reflection
 
 I had recently left my company to further my studies and realized I could just build Frontend UI's. I chose to pick this project to strengthen my backend development skills.
 
